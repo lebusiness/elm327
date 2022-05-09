@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+.header {
+    &__logo {
+        padding: 20px 0;
+        background: rgb(29, 29, 29);
+        @include flex(row, center, center);
+    }
+    &__nav {
+        padding: 11px 0;
+        background: #333333;
+        @include flex(row, center, center);
+    }
+    &__menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 50px;
+        @media (max-width: map-get($container-max-widths, sm)) {
+            grid-template-columns: 1fr 1fr;
+            row-gap: 10px;
+            width: 100%;
+        }
+        &-item {
+            justify-self: center;
+            height: 100%;
+        }
+        &-link {
+            color: white;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 1;
+            transition: 0.15s color;
+            &:hover {
+                color:#f75f04;
+            }
+            &--active {
+                color:#f75f04;
+            }
+        }
+    }
+}

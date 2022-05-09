@@ -1,0 +1,111 @@
+@use '../abstracts' as *;
+@keyframes appear {
+    0% {opacity: 1; transform: translateX(-50px)}
+    100% {opacity: 1; transform: translateX(0px);}
+}
+.product {
+    padding-bottom: 80px;
+    &__items {
+        margin-top: 50px;
+    }
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        grid-auto-flow: column;
+        column-gap: 100px;
+        &-title {
+            font-weight: 700;
+            font-size: 20px;
+            @media (max-width: map-get($container-max-widths, lg)) {
+                margin-top: 25px;
+            }
+        }
+        @media (max-width: map-get($container-max-widths, lg)) {
+            grid-auto-flow: row;
+            grid-template-columns: 1fr;
+        }
+    }
+    &__photo {
+
+    }
+    &__line {
+        background: #333;
+        height: 20px;
+        width: 100%;
+        margin: 50px 0;
+        @media (max-width: map-get($container-max-widths, sm)) {
+            margin: 30px 0;
+        }
+    }
+    &__subtitle {
+        margin-top: 40px;
+    }
+    &__under-subtitle {
+        margin-top: 20px;
+    }
+    &__img {
+        display: block;
+        margin: 0 auto;
+        height: 300px;
+        animation: appear 0.8s 1 cubic-bezier(.18,.92,.64,.92);
+        @media (max-width: map-get($container-max-widths, md)) {
+            height: auto;
+            width: 80%;
+        }
+    }
+    &__small-imgs-wrapper {
+        margin-top: 30px;
+        width: 70%;
+        cursor: pointer;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        column-gap: 30px;
+        @media (max-width: map-get($container-max-widths, md)) {
+            width: 100%;
+            column-gap: 0px;
+        }
+
+    }
+    &__small-img {
+        height: 80px;
+        padding: 5px;
+        border: 1px solid rgba(255, 255, 255, 0);
+        transition: 0.2s;
+        opacity: 0.7;
+        &:hover {
+            border: 1px solid rgba(221, 221, 221, 0.533);
+            opacity: 0.8;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            height: 45px;
+            justify-self: center;
+        }
+    }
+
+
+    &__buttons-wrapper {
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        @media (max-width: map-get($container-max-widths, md)) {
+            grid-template-columns: 1fr;
+            row-gap: 10px;
+        }
+    }
+    &__paragraph {
+        font-size: 16px;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-weight: 300;
+        &--little {
+            margin-top: 10px;
+        }
+    }
+}
+
+.img--active {
+    border: 1px solid rgb(221, 221, 221) !important;
+    opacity: 1 !important;
+}

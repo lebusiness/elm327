@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./stylesheets/main.css">
+    <link rel="shortcut icon" href="./imgs/header/logo.png" type="image/x-icon">
+    <title>ELM327 BLUETOOTH</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <img src="./imgs/header/logo.png" height="50px" alt="logo" class="header__img">
+            </div>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a href="./index.html" class="header__menu-link">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="./programs.html" class="header__menu-link">
+                            Программы
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="./instruction.html" class="header__menu-link header__menu-link--active">
+                            Инструкция
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="./product.html" class="header__menu-link">
+                            Где купить
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="instruction">
+            <div class="title-bar">
+                <div class="container">
+                    <h2 class="title">
+                        Инструкция по настройке диагностического адаптера ELM 327
+                    </h2>
+                    <div class="instruction__items">
+                        <p class="instruction__paragraph">
+                            <b>Внимание!</b> <br>
+                            При установлении прибора на модели ВАЗ и иные ТС отечественного производства до 2006 года выпуска, то без переходника не обойтись.
+                            Сканер не поддерживает два протокола связи, которые снабжались автомобили Российского и Европейского производства до 2006 года выпуска. Эти протоколы поддерживают, к примеру, авто марки Ford и Mazda, которые выпущены до 2006 года.
+                            Но корректно работает с новым программным обеспечением. Если транспортное средство поддерживает шину CAN, то можете пользоваться диагностическим прибором с любой прошивкой чипа.
+                        </p>
+                        <p class="instruction__paragraph">
+                            Итак, приступим, если у Вас имеется диагностический адаптер ELM327 Bluetooth то для его работы с программой Torque Вам необходимо:
+                        </p>
+                        <p class="instruction__paragraph">
+                            1.   Подключить диагностический адаптер ELM 327 Bluetooth к диагностическому разъему OBD II Вашего авто после чего необходимо включить зажигание.
+                        </p>
+                        <p class="instruction__paragraph">
+                            2.   Затем включите модуль Bluetooth на Вашем устройстве (смартфон или планшетный ПК на платформе Android).
+                        </p>
+                        <img src="./imgs/instruction/1.png" width="250px" class="instruction__img" alt="включите Bluetooth">
+                        <p class="instruction__paragraph">
+                            3.    В настройках Вашего мобильного устройства Вам необходимо зайти в раздел беспроводных сетей Bluetooth и нажать поиск нового оборудования для сопряжения. В окне поиска появится новое устройство (как правило идентификатор "CHX", "OBDII", "CBT", "Vgate" и т.п.) После этого Вы можете нажать на пункт сопряжения с устройством (потребуется ввести пароль из инструкции к адаптеру, как правило это 1234,0000,1111,9999,6789).
+                        </p>
+                        <img src="./imgs/instruction/2.png" width="250px" class="instruction__img" alt="выберите устройство">
+                        <p class="instruction__paragraph">
+                            4.  После этого откройте программу Torque.
+                        </p>
+                        <p class="instruction__paragraph">
+                            5.  Перейдите в меню программы пункт «настройки».
+                        </p>
+                        <img src="./imgs/instruction/3.png" width="250px" class="instruction__img" alt="Torque настройки">
+                        <p class="instruction__paragraph">
+                            6.  Откройте раздел "OBD2 настройки адаптера / Выберите устройство Bluetooth" и выберите Ваш адаптер ELM 327 Bluetooth (имеет идентификатор "CHX", "OBDII", "CBT", "Vgate" и т.п.) из списка.
+                        </p>
+                        <img src="./imgs/instruction/4.jpg" width="300px" class="instruction__img" alt="раздел OBD2">
+                        <p class="instruction__paragraph">
+                            7.  После этого нажмите на иконку с надписью "Adapter Status" и проверьте подключение (должны появится зеленые галочки у первых 3-х пунктов в списке).
+                        </p>
+                        <p class="instruction__paragraph">
+                            8.   Так же выбрать протокол вручную можно в пункте "Профили автомобиля" (находится в том же меню, где и "настройки").
+                        </p>
+                        <p class="instruction__paragraph">
+                            9.    После этого Вы можете начинать диагностировать Ваш автомобиль! 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            ELM 327
+        </div>
+    </footer>
+</body>
+</html>

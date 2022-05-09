@@ -1,0 +1,24 @@
+@use '../abstracts/' as *;
+@use "sass:color";
+.btn {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    padding: 12px 30px 13px 30px;
+    text-align: center;
+    transition: 0.2s box-shadow;
+    &--theme-wb {
+        background: linear-gradient(to right,#cb11ab 0,#481173 100%) no-repeat;
+    }
+    &--theme-ozon {
+        background: #005cff;
+    }
+    &--theme-opacity {
+        color: #333;
+        border: 1px solid #333;
+    }
+    &:hover {
+        box-shadow: 2px 3px 7px 0px rgba(34, 60, 80, 0.3);
+    }
+}

@@ -1,0 +1,63 @@
+@use '../abstracts' as *;
+.promo {
+    padding: 40px 0;
+    &__title {
+        font-weight: 300;
+        font-size: 35px;
+        text-align: center;
+        color: #333;
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+        &--bold {
+            font-weight: 600;
+        }
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 32px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 25px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            font-size: 20px;
+        }
+    }
+    &__items {
+        margin-top: 90px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 70px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            row-gap: 40px;
+            grid-template-columns: 1fr;
+            margin-top: 35px;
+        }
+
+    }
+    &__item {
+        @include flex(column, flex-start, center);
+        @media (max-width: map-get($container-max-widths, lg)) {
+            row-gap: 40px;
+        }
+        &-img {
+            height: 400px;
+            margin-bottom: 40px;
+            @media (max-width: map-get($container-max-widths, sm)) {
+                height: 400px;
+            }
+        }
+        &-title {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+    &__buttons-wrapper {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 12px;
+        @media (max-width: map-get($container-max-widths, sm)) {
+            row-gap: 6px;
+            grid-template-columns: auto;
+        }
+    }
+}

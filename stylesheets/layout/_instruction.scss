@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+.instruction {
+    padding-bottom: 80px;
+    &__content {
+        margin-top: 50px   
+    }
+    &__paragraph {
+        font-weight: 300;
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+    &__img {
+        margin: 15px 0 10px 0;
+    }
+}
+
